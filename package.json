@@ -5,8 +5,15 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint './src/**/*.{ts,tsx}'"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.@(t|j)s?(x)\"",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "react",
@@ -15,13 +22,19 @@
   ],
   "author": "Isaiah Smith",
   "license": "MIT",
+  "files": [
+    "dist/**/*"
+  ],
   "devDependencies": {
     "@types/react": "^16.9.5",
     "@typescript-eslint/eslint-plugin": "^2.3.3",
     "@typescript-eslint/parser": "^2.3.3",
+    "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
     "prettier": "^1.18.2",
     "typescript": "^3.6.3"
   },
