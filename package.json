@@ -1,6 +1,6 @@
 {
-  "name": "use-dark-mode",
-  "version": "0.1.0",
+  "name": "use-prefer-dark-mode",
+  "version": "1.0.0",
   "description": "Small react hook to determine if your user prefers dark mode on their system.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

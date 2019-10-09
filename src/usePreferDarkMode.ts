@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const useDarkMode = (): boolean => {
+const usePreferDarkMode = (): boolean => {
     const [darkMode, setDarkMode] = useState(false)
 
     useEffect(() => {
@@ -16,4 +16,4 @@ const useDarkMode = (): boolean => {
     return darkMode
 }
 
-export default useDarkMode
+export default usePreferDarkMode
