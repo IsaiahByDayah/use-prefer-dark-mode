@@ -3,7 +3,7 @@ Small react hook to determine if your user prefers dark mode on their system.
 
 ## install
 ```
-npm install use-prefer-dark-mode
+npm install --save use-prefer-dark-mode
 # or
 yarn add use-prefer-dark-mode
 ```
