@@ -1,6 +1,10 @@
 # use-prefer-dark-mode
 Small react hook to determine if your user prefers dark mode on their system.
 
+A lot of packages that deal with determining if you should use dark mode come with unneeded components, Contexts Providers & Consumers, configs objects you have to pass in, etc. 
+
+This one is simple. It only tells you if your user __*prefers*__ dark mode based on their os settings. We let __*you*__ determine where and how you deal with that preference. 🤙🏽
+
 ## install
 ```
 npm install --save use-prefer-dark-mode
@@ -15,10 +19,10 @@ yarn add use-prefer-dark-mode
 ## usage
 ```javascript
 import React from "react"
-import useDM from "use-prefer-dark-mode"
+import usePDM from "use-prefer-dark-mode"
 
 const HelloWorld = () => {
-  const darkMode = useDM() // Boolean of if the user prefers dark mode according to their OS system
+  const prefersDarkMode = usePDM() // Boolean of if the user prefers dark mode according to their OS system
   
   const darkStyles = {
     backgroundColor: "black",
@@ -30,7 +34,7 @@ const HelloWorld = () => {
     color: "black"
   }
   
-  const styles = darkMode ? darkStyles : lightStyles
+  const styles = prefersDarkMode ? darkStyles : lightStyles
   
   return <div style={styles} >Hello, World!</div>
 }
