@@ -22,6 +22,14 @@
   ],
   "author": "Isaiah Smith",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordankid93/use-prefer-dark-mode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jordankid93/use-prefer-dark-mode/issues"
+  },
+  "homepage": "https://github.com/jordankid93/use-prefer-dark-mode#readme",
   "files": [
     "dist/**/*"
   ],
